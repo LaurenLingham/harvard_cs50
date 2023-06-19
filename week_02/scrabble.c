@@ -23,5 +23,6 @@ int main(void)
 
 int compute_score(string word)
 {
-    // TODO: Compute and return score for string
+    //Create a score tracker
+    int score = 0;
 }
