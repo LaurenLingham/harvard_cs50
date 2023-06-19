@@ -25,4 +25,11 @@ int compute_score(string word)
 {
     //Create a score tracker
     int score = 0;
+
+    //Calcuate score
+    length = strlen(word);
+    for (int i = 0; i < length; i++)
+    {
+        
+    }
 }
