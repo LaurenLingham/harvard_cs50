@@ -14,5 +14,15 @@ int main(void)
 
 int count_letters(string text)
 {
-    
+    int count = 0;
+
+    for (int i = 0; i < strlen(text); i++)
+    {
+        if ((text[i] >= 'a' && text[i] <= 'z') || (text[i] >= 'A' && text[i] <= 'Z'))
+        {
+            count++;
+        }
+    }
+
+    return count;
 }
