@@ -12,7 +12,7 @@ int main(void)
 {
     // Prompts user for text input
     string text = get_string("Text: ");
-    
+
     int letters = count_letters(text);
     int words = count_words(text);
     int sentences = count_sentences(text);
@@ -21,7 +21,7 @@ int main(void)
     double S = sentences / (float)words * 100;
 
     // Coleman-Liau index for calculating reading grade
-    int index = round(0.0588 * L - 0.296 * s - 15.8);
+    int index = round(0.0588 * L - 0.296 * S - 15.8);
 
     // Print the relevant grade to the console
     if (index > 16)
