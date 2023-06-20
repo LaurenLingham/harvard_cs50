@@ -1,20 +1,35 @@
 #include <cs50.h>
 #include <stdio.h>
 #include <string.h>
+#include <math.h>
 
 int count_letters(string text);
 int count_words(string text);
 int count_sentences(string text);
 
+
 int main(void)
 {
-    // Asks user for text and prints it to the console, along with number of letters, words & sentences
+    // Prompts user for text input
     string text = get_string("Text: ");
+    
     int letters = count_letters(text);
     int words = count_words(text);
     int sentences = count_sentences(text);
 
-    printf("%s\n %i letters\n %i words\n %i sentences\n", text, letters, words, sentences);
+    double L = letters / (float)words * 100;
+    double S = sentences / (float)words * 100;
+
+    // Coleman-Liau index for calculating reading grade
+    int index = round(0.0588 * L - 0.296 * s - 15.8);
+
+    // Print the relevant grade to the console
+    if (index > 16)
+        printf("Grade 16+\n");
+    else if (index < 1)
+        printf("Before Grade 1\n");
+    else
+        printf("Grade %i\n", index);
 }
 
 int count_letters(string text)
