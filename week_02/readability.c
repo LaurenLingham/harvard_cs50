@@ -25,11 +25,17 @@ int main(void)
 
     // Print the relevant grade to the console
     if (index > 16)
+    {
         printf("Grade 16+\n");
+    }
     else if (index < 1)
+    {
         printf("Before Grade 1\n");
+    }
     else
+    {
         printf("Grade %i\n", index);
+    }
 }
 
 int count_letters(string text)
@@ -40,7 +46,9 @@ int count_letters(string text)
     for (int i = 0; i < strlen(text); i++)
     {
         if ((text[i] >= 'a' && text[i] <= 'z') || (text[i] >= 'A' && text[i] <= 'Z'))
+        {
             count++;
+        }
     }
 
     return count;
@@ -54,7 +62,9 @@ int count_words(string text)
     for (int i = 0; i < strlen(text); i++)
     {
         if (text[i] == ' ')
+        {
             count ++;
+        }
     }
 
     // add 1 to the count total to include the final word
@@ -69,7 +79,9 @@ int count_sentences(string text)
     for (int i = 0; i < strlen(text); i++)
     {
         if (text[i] == '.' || text[i] == '!' || text[i] == '?')
-        count ++;
+        {
+            count ++;
+        }
     }
 
     return count;
