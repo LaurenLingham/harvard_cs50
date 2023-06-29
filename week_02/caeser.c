@@ -13,7 +13,7 @@ int main(int argc, string argv[])
         return 1;
     }
 
-    // check key is positive integer
+    // check key is a positive integer
     for (int i = 0; i < strlen(argv[1]); i++)
     {
         if (!isdigit(argv[1][i]))
@@ -30,7 +30,7 @@ int main(int argc, string argv[])
     string plaintext = get_string("plaintext: ");
     printf("ciphertext: ");
 
-    // loop through each character of input and if it's a letter swap it using the key
+    // loop through each character of input and if it's a letter swap it using the key and print it
     for (int j = 0; j < strlen(plaintext); j++)
     {
         if (isupper(plaintext[j]))
