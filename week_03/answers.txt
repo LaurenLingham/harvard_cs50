@@ -8,4 +8,4 @@ How do you know?: Sorted random lists the fastest
 
 sort3 uses: Selection Sort
 
-How do you know?: Power of deduction.  On random lists it was faster than Bubble Sort but slower than Merge SOrt
+How do you know?: Power of deduction.  Random lists was faster than Bubble Sort but slower than Merge Sort
